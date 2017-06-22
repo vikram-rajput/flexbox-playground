@@ -1,0 +1,135 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body, html {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all 3s ease;
+}
+
+body{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+background: #FEDF15;  /* fallback for old browsers */
+/*background: linear-gradient(to right, #191654, #43C6AC);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #fff;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+
+#controls {
+  padding: 2em;
+  background-color: #000;
+  font-weight: bold;
+
+  padding: 2em;
+  margin: 1em 0;
+}
+
+#controls h1 {
+  font-size: 1.2em;
+  
+}
+
+#controls input[type="radio"] {
+display: none;
+}
+
+.radioGroup {
+  border: solid 0.1em rgba(255,255,255, 0.2);
+margin-bottom:25px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  flex: 1;
+  min-height: 2em;
+
+}
+
+.caption{background:#000; padding:5px 15px; color:#fff;}
+.radioGroup input[type="radio"]:checked + label{
+  background-color: rgba(138, 191, 124,0.2);
+}
+
+.radioGroup input[type="radio"]:not + label{
+  background-color: none;
+}
+
+#exampleContainer {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  width: 55em;
+  border: 1em solid #333;
+  min-height: 24em;
+  align-items: flex-start;
+}
+
+.example{
+  justify-content: center;
+  font-weight: bold;
+  color: #FFF;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 0px;
+  min-height: 4em;
+  min-width: 8em;
+  display: flex;
+  align-items: center;
+  
+}
+
+#example1 {
+    background-color: #666;
+}
+#example2 {
+  background-color: #666;
+}
+#example3 {
+  background-color: #666 ;
+}
+
+
+span{
+  display: inline-block;
+  width: 6em;
+  margin: 0.1em;
+}
+
+a  {
+
+  color: #FFF;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+p{
+	color:#000;
+}

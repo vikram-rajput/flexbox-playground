@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding Flexbox | Flexbox Tutorial</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="wrapper">
+      <h1 class="caption">Flexbox Playground</h1>
+  <div class="center">
+  
+
+
+<div id="controls">
+  <h1>Flex-Direction</h1>
+<form class="flex-direction radioGroup" onClick="updateDirection()">
+  <div>
+    <input type="radio" id="radioRow" name="flexdirection" value="row" checked="checked"/> <label for="radioRow">Row</label> 
+  </div>
+   <div>
+    <input type="radio" id="radioRowR" name="flexdirection" value="row-reverse"/> <label for="radioRowR">row-reverse</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioCol" name="flexdirection" value="column"/> <label for="radioCol">Column</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioColR" name="flexdirection" value="column-reverse"/> <label for="radioColR">column-reverse</label> 
+  </div>
+ </form>
+   <h1>Justify-Content</h1>
+  <form class="justify-content radioGroup" onClick="updateJustify()">
+  <div>
+    <input type="radio" id="radioStart" name="justifyContent" value="flex-start" checked="checked"/> <label for="radioStart">Flex-Start</label> 
+  </div>
+   <div>
+    <input type="radio" id="radioCenter" name="justifyContent" value="center"/> <label for="radioCenter">Center</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioEnd" name="justifyContent" value="flex-end"/> <label for="radioEnd">Flex-End</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioBetween" name="justifyContent" value="space-between"/> <label for="radioBetween">Space-Between</label>
+  </div>
+    <div>
+           <input type="radio" id="radioAround" name="justifyContent" value="space-around"/> <label for="radioAround">Space-Around</label> </div>
+ </form>
+  
+  <h1>Align-Items</h1>
+  <form class="justify-content radioGroup" onClick="updateAlign()">
+  <div>
+    <input type="radio" id="radioStartA" name="alignItems" value="flex-start" checked="checked"/> <label for="radioStartA">Flex-Start</label> 
+  </div>
+   <div>
+    <input type="radio" id="radioCenterA" name="alignItems" value="center"/> <label for="radioCenterA">Center</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioEndA" name="alignItems" value="flex-end"/> <label for="radioEndA">Flex-End</label> 
+  </div>
+     <div>
+    <input type="radio" id="radioStretch" name="alignItems" value="stretch"/> <label for="radioStretch">Stretch</label>
+  </div>
+    <div>
+           <input type="radio" id="radioBaseline" name="alignItems" value="baseline"/> <label for="radioBaseline">Baseline</label> </div>
+ </form>
+  
+  
+</div>
+
+<div id="exampleContainer">
+
+<div class="example" id="example1">Box 1</div>
+<div class="example" id="example2">Box 2</div>
+<div class="example" id="example3">Box 3</div>
+
+</div>
+  </div>
+  
+<p>Made With Love - Vikram Rajput</p>
+  
+</div>
+  
+    <script>
+	var flex = document.querySelector('#exampleContainer');
+
+
+function updateDirection() {
+  let selected = document.querySelector('input[name="flexdirection"]:checked').value;
+  flex.style.flexDirection = selected;
+}
+
+
+function updateJustify() {
+  let selected = document.querySelector('input[name="justifyContent"]:checked').value;
+  flex.style.justifyContent = selected;
+}
+
+function updateAlign() {
+  let selected = document.querySelector('input[name="alignItems"]:checked').value;
+  flex.style.alignItems = selected;
+}
+	</script>
+
+</body>
+</html>
